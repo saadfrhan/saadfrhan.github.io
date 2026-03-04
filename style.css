@@ -1,3 +1,6 @@
+/* ============================================
+   CSS VARIABLES
+   ============================================ */
 :root {
   --bg: #0f0f0f;
   --text: #e8e8e8;
@@ -5,6 +8,9 @@
   --muted: #7a8a85;
 }
 
+/* ============================================
+   BASE STYLES
+   ============================================ */
 body {
   max-width: 600px;
   margin: 60px auto;
@@ -15,11 +21,97 @@ body {
   line-height: 1.7;
 }
 
+ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+/* ============================================
+   TYPOGRAPHY
+   ============================================ */
+h1 {
+  font-family: "Cormorant", Georgia, serif;
+  font-size: 2.4rem;
+  letter-spacing: -1px;
+  margin-bottom: 4px;
+}
+
+h2 {
+  color: var(--muted);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+/* ============================================
+   LINKS
+   ============================================ */
+a {
+  color: var(--accent);
+  text-decoration: none;
+  transition:
+    color 200ms ease,
+    opacity 200ms ease;
+}
+
+a:hover {
+  color: var(--text);
+  opacity: 0.8;
+}
+
+li a {
+  display: inline-block;
+  transition:
+    transform 150ms ease,
+    color 150ms ease;
+}
+
+li a:hover {
+  color: var(--text);
+}
+
+/* ============================================
+   NAVIGATION
+   ============================================ */
+nav {
+  display: flex;
+  gap: 1.5rem;
+  padding-top: 6px;
+}
+
+nav a {
+  font-size: 0.9rem;
+  color: var(--muted);
+  transition: color 150ms ease;
+}
+
+nav a:hover {
+  color: var(--text);
+}
+
+nav a.active {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+/* ============================================
+   COMPONENTS
+   ============================================ */
+
+/* Bio Section */
 .bio {
   margin-top: 6px;
 }
 
-.bookmarks {
+/* Bookmarks & Links Lists */
+.bookmarks,
+.links {
   padding: 0;
   list-style: none;
 }
@@ -62,11 +154,51 @@ body {
 }
 
 .bookmarks a:hover::after,
-links a:hover::after {
+.links a:hover::after {
   color: var(--accent);
   transform: translateX(4px);
 }
 
+.links li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.links li a {
+  flex: 1;
+}
+
+.copy-btn {
+  background: none;
+  border: 1px solid color-mix(in srgb, var(--muted) 40%, transparent);
+  color: var(--muted);
+  font-family: "Jost", Georgia, serif;
+  font-size: 0.75rem;
+  padding: 3px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition:
+    color 150ms ease,
+    border-color 150ms ease;
+  white-space: nowrap;
+}
+
+.copy-btn:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+.copy-btn.copied {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+.email-link::after {
+  display: none;
+}
+
+/* Link Text Components */
 .link-text {
   display: flex;
   flex-direction: column;
@@ -83,6 +215,9 @@ links a:hover::after {
   display: block;
 }
 
+/* ============================================
+   FOOTER
+   ============================================ */
 footer {
   margin-top: 4rem;
   padding-top: 1rem;
@@ -95,90 +230,9 @@ footer time {
   color: var(--text);
 }
 
-h1 {
-  font-family: "Cormorant", Georgia, serif;
-  font-size: 2.4rem;
-  letter-spacing: -1px;
-  margin-bottom: 4px;
-}
-
-h2 {
-  color: var(--muted);
-  font-size: 0.85rem;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  margin-top: 2rem;
-  margin-bottom: 0.75rem;
-}
-
-ul {
-  padding-left: 0;
-  list-style: none;
-}
-
-li {
-  margin-bottom: 0.5rem;
-}
-
-li a {
-  display: inline-block;
-  transition:
-    transform 150ms ease,
-    color 150ms ease;
-}
-
-li a:hover {
-  color: var(--text);
-}
-
-a {
-  color: var(--accent);
-  text-decoration: none;
-  transition:
-    color 200ms ease,
-    opacity 200ms ease;
-}
-
-a:hover {
-  color: var(--text);
-  opacity: 0.8;
-}
-
-nav {
-  display: flex;
-  gap: 1.5rem;
-  padding-top: 6px;
-}
-
-nav a {
-  font-size: 0.9rem;
-  color: var(--muted);
-  transition: color 150ms ease;
-}
-
-nav a:hover {
-  color: var(--text);
-}
-
-nav a.active {
-  color: var(--accent);
-  font-weight: 600;
-}
-
-@media (max-width: 600px) {
-  nav {
-    padding-top: 0;
-  }
-
-  h1 {
-    font-size: 1.6rem;
-  }
-
-  body {
-    margin: 30px auto;
-  }
-}
-
+/* ============================================
+   ANIMATIONS
+   ============================================ */
 @keyframes fadein {
   from {
     opacity: 0;
@@ -203,9 +257,39 @@ footer {
   animation-delay: 200ms;
 }
 
+/* ============================================
+   MEDIA QUERIES
+   ============================================ */
+
+/* Mobile Styles */
+@media (max-width: 600px) {
+  body {
+    margin: 30px auto;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  nav {
+    padding-top: 0;
+  }
+}
+
+/* Accessibility - Reduced Motion */
 @media (prefers-reduced-motion: reduce) {
   main,
   footer {
     animation: none;
+  }
+}
+
+/* Light scheme colors */
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg: #f5f0e8;
+    --text: #1a1a1a;
+    --accent: #0a7c6e;
+    --muted: #888888;
   }
 }

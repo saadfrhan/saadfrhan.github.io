@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Saad Farhan - links and bookmarks." />
     <meta name="author" content="Saad Farhan" />
-    <meta property="og:title" content="Saad Farhan" />
     <meta property="og:description" content="Links and bookmarks." />
+    <meta property="og:title" content="Saad Farhan" />
     <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://saadfrhan.github.io" />
     <title>Saad Farhan</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -20,6 +21,7 @@
       rel="icon"
       href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌙</text></svg>"
     />
+    <link rel="canonical" href="https://saadfrhan.github.io" />
   </head>
 
   <body>
@@ -30,7 +32,9 @@
 
     <main>
       <section>
-        <h1>Saad Farhan</h1>
+        <div class="header-left">
+          <h1>Saad Farhan</h1>
+        </div>
         <p class="bio">
           I work on things I find interesting. This is my home on the web.
         </p>
@@ -38,8 +42,25 @@
       <section>
         <h2>Find me</h2>
         <ul class="links">
-          <li><a href="https://github.com/saadfrhan">GitHub</a></li>
-          <li><a href="mailto:saadfarhan023@gmail.com">Email</a></li>
+          <li>
+            <a href="https://github.com/saadfrhan">
+              <span class="link-text">
+                <span class="link-title">GitHub</span>
+                <span class="link-desc">github.com/saadfrhan</span>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="mailto:saadfarhan023@gmail.com" class="email-link">
+              <span class="link-text">
+                <span class="link-title">Email</span>
+                <span class="link-desc">saadfarhan023@gmail.com</span>
+              </span>
+            </a>
+            <button class="copy-btn" data-email="saadfarhan023@gmail.com">
+              copy
+            </button>
+          </li>
         </ul>
       </section>
 
@@ -77,5 +98,22 @@
     <footer>
       <p>Updated <time datetime="2026-03">March 2026</time>.</p>
     </footer>
+    <script>
+      const btn = document.querySelector(".copy-btn");
+
+      btn.addEventListener("click", () => {
+        const email = btn.dataset.email;
+
+        navigator.clipboard.writeText(email).then(() => {
+          btn.textContent = "copied ✓";
+          btn.classList.add("copied");
+
+          setTimeout(() => {
+            btn.textContent = "copy";
+            btn.classList.remove("copied");
+          }, 2000);
+        });
+      });
+    </script>
   </body>
 </html>
