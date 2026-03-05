@@ -9,27 +9,41 @@
         <atom:link href="https://saadfrhan.is-a.dev/feed.xml" rel="self" type="application/rss+xml" />
 
         <item>
-            <title>Hacker News</title>
-            <link>https://news.ycombinator.com</link>
-            <description>Tech news and discussion.</description>
+            <title>CS50s Introduction to Programming with Python</title>
+            <link>https://cs50.harvard.edu/python/weeks/0/</link>
+            <description>Where I'm starting to learn properly</description>
             <pubDate>Tue, 06 Mar 2026 00:00:00 +0500</pubDate>
-            <guid>https://news.ycombinator.com</guid>
+            <guid>https://cs50.harvard.edu/python/weeks/0/</guid>
         </item>
 
         <item>
-            <title>MDN Web Docs</title>
-            <link>https://developer.mozilla.org</link>
-            <description>The web development bible.</description>
+            <title>Python on Exercism</title>
+            <link>https://exercism.org/tracks/python</link>
+            <description>Where I practice what CS50 teaches</description>
             <pubDate>Tue, 06 Mar 2026 00:00:00 +0500</pubDate>
-            <guid>https://developer.mozilla.org</guid>
+            <guid>https://exercism.org/tracks/python</guid>
         </item>
 
         <item>
-            <title>Lobsters</title>
-            <link>https://lobste.rs</link>
-            <description>Quieter, slower tech links.</description>
+            <title>A practical introduction to Docker containers | Red Hat
+                Developer</title>
+            <link>
+                https://developers.redhat.com/blog/2014/05/15/practical-introduction-to-docker-containers</link>
+            <description>Still don't fully get it</description>
             <pubDate>Tue, 06 Mar 2026 00:00:00 +0500</pubDate>
-            <guid>https://lobste.rs</guid>
+            <guid>
+                https://developers.redhat.com/blog/2014/05/15/practical-introduction-to-docker-containers</guid>
+        </item>
+
+        <item>
+            <title>A Practical Introduction to Container Terminology | Red Hat
+                Developer</title>
+            <link>
+                https://developers.redhat.com/blog/2018/02/22/container-terminology-practical-introduction#background</link>
+            <description>Knowing the actual vocab behind Docker</description>
+            <pubDate>Tue, 06 Mar 2026 00:00:00 +0500</pubDate>
+            <guid>
+                https://developers.redhat.com/blog/2018/02/22/container-terminology-practical-introduction#background</guid>
         </item>
     </channel>
 
