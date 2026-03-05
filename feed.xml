@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Saad Farhan</title>
+        <link>https://saadfrhan.is-a.dev</link>
+        <description>Links and bookmarks by Saad Farhan.</description>
+        <language>en</language>
+        <lastBuildDate>Fri, 06 Mar 2026 00:00:00 +0500</lastBuildDate>
+        <atom:link href="https://saadfrhan.is-a.dev/feed.xml" rel="self" type="application/rss+xml" />
+
+        <item>
+            <title>Hacker News</title>
+            <link>https://news.ycombinator.com</link>
+            <description>Tech news and discussion.</description>
+            <pubDate>Tue, 06 Mar 2026 00:00:00 +0500</pubDate>
+            <guid>https://news.ycombinator.com</guid>
+        </item>
+
+        <item>
+            <title>MDN Web Docs</title>
+            <link>https://developer.mozilla.org</link>
+            <description>The web development bible.</description>
+            <pubDate>Tue, 06 Mar 2026 00:00:00 +0500</pubDate>
+            <guid>https://developer.mozilla.org</guid>
+        </item>
+
+        <item>
+            <title>Lobsters</title>
+            <link>https://lobste.rs</link>
+            <description>Quieter, slower tech links.</description>
+            <pubDate>Tue, 06 Mar 2026 00:00:00 +0500</pubDate>
+            <guid>https://lobste.rs</guid>
+        </item>
+    </channel>
+
+</rss>
